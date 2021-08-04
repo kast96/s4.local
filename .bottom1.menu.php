@@ -1,0 +1,40 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$aMenuLinks = Array(
+	Array(
+		"Каталог",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Акции",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Конструктор изделия",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Бренды",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Качество",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+);
+?>

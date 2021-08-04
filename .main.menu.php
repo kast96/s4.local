@@ -1,0 +1,63 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная",
+		"/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"О нас",
+		"about/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Качество",
+		"quality/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Сервис",
+		"service/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Медиа",
+		"media/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Помощь",
+		"help/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Дистанционное обучение",
+		"distance/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Контакты",
+		"contacts/",
+		Array(),
+		Array(
+			'SHOW_SOCIALS' => 'Y'
+		),
+		""
+	),
+);
+?>

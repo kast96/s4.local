@@ -1,0 +1,47 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$aMenuLinks = Array(
+	Array(
+		"О нас",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Новости",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Партнеры",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Вакансии",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Сервис",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Помощь",
+		"#",
+		Array(),
+		Array(),
+		""
+	),
+);
+?>

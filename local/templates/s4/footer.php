@@ -1,0 +1,117 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
+<?
+use \Bitrix\Main\Localization\Loc;
+Loc::loadMessages(__FILE__);
+?>
+
+			<?if($APPLICATION->GetCurPage(false) != '/' && $APPLICATION->GetProperty('widepage') != 'Y'):?>
+				</div>
+			<?endif?>
+			<!--container-->
+		</div>
+		<!--main-content-->
+	</div>
+	<!--wrapper-->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-body">
+				<div class="footer-col footer-col_company">
+					<div class="footer-company">
+						<a class="footer-logo" href="/">
+							<?$APPLICATION->IncludeFile(
+								"/include/logo.php",
+								array(),
+								array("MODE"=>"html")
+							);?>
+						</a>
+					</div>
+				</div>
+				<div class="footer-col footer-col_menu">
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"bottom",
+						array(
+							"ROOT_MENU_TYPE" => "bottom1",
+							"MAX_LEVEL" => "3",
+							"CHILD_MENU_TYPE" => "bottom1",
+							"USE_EXT" => "Y",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "36000000",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => ""
+						),
+						false,
+						array(
+							"ACTIVE_COMPONENT" => "Y"
+						)
+					);?>
+				</div>
+				<div class="footer-col footer-col_menu-add">
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"bottom",
+						array(
+							"ROOT_MENU_TYPE" => "bottom2",
+							"MAX_LEVEL" => "3",
+							"CHILD_MENU_TYPE" => "bottom2",
+							"USE_EXT" => "Y",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "36000000",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => ""
+						),
+						false,
+						array(
+							"ACTIVE_COMPONENT" => "Y"
+						)
+					);?>
+				</div>
+				<div class="footer-col footer-col_socials">
+					<div class="footer-title">Мы в социальных сетях</div>
+					<?$APPLICATION->IncludeFile(
+						"/include/socials.php",
+						array(),
+						array("MODE"=>"html")
+					);?>
+				</div>
+				<div class="footer-col footer-col_contacts">
+					<div class="footer-contacts">
+						<div class="footer-contacts-info">
+							<div class="footer-title">Контакты</div>
+							<div class="footer-phone">
+								<a href="tel:8415642955">(84156) 4-29-55</a>
+							</div>
+							<div class="footer-phone">
+								<a href="tel:8415642956">(84156) 4-29-56</a>
+							</div>
+							<div class="footer-email">
+								<i class="footer-menu-icon footer-menu-icon--left fa fa-envelope"></i>
+								<a href="mailto:shkola414@yandex.ru">shkola414@yandex.ru</a>
+							</div>
+							<div class="footer-address">
+								<i class="footer-menu-icon footer-menu-icon--left fa fa-map-marker-alt"></i>
+								<span>442246 Пензенская обл., г.Каменка, ул. Чернышевского 6</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-copyright">
+					<div class="footer-copyright-company">© МОУ СОШ №4 г. Каменка, 2017-2021</div>
+				</div>
+				<div class="footer-developer">При использовании любых материалов просим указывать ссылку на shool4.ru</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="preloader g-hidden js-preloader">
+		<div class="preloader-container"></div>
+	</div>
+
+	<div class="svg-box">
+		<?require($_SERVER['DOCUMENT_ROOT'].'/include/svg.php')?>
+	</div>
+</body>
+</html>
