@@ -66,7 +66,7 @@ $APPLICATION->SetTitle('МОУ СОШ №4 г.Каменка');
 	false
 );?>
 
-<section class="fast-links-section">
+<section class="fast-links-section bg-section section-border">
 	<div class="container">
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -75,6 +75,140 @@ $APPLICATION->SetTitle('МОУ СОШ №4 г.Каменка');
 				"COMPONENT_TEMPLATE" => "fast_links",
 				"IBLOCK_TYPE" => "-",
 				"IBLOCK_ID" => "16",
+				"NEWS_COUNT" => "20",
+				"SORT_BY1" => "SORT",
+				"SORT_ORDER1" => "ASC",
+				"SORT_BY2" => "ACTIVE_FROM",
+				"SORT_ORDER2" => "DESC",
+				"FILTER_NAME" => "",
+				"FIELD_CODE" => array(
+					0 => "",
+					1 => "",
+				),
+				"PROPERTY_CODE" => array(
+					0 => "SVG",
+					1 => "LINK",
+				),
+				"CHECK_DATES" => "Y",
+				"DETAIL_URL" => "",
+				"AJAX_MODE" => "N",
+				"AJAX_OPTION_JUMP" => "N",
+				"AJAX_OPTION_STYLE" => "Y",
+				"AJAX_OPTION_HISTORY" => "N",
+				"AJAX_OPTION_ADDITIONAL" => "",
+				"CACHE_TYPE" => "A",
+				"CACHE_TIME" => "36000000",
+				"CACHE_FILTER" => "N",
+				"CACHE_GROUPS" => "Y",
+				"PREVIEW_TRUNCATE_LEN" => "",
+				"ACTIVE_DATE_FORMAT" => "d.m.Y",
+				"SET_TITLE" => "N",
+				"SET_BROWSER_TITLE" => "N",
+				"SET_META_KEYWORDS" => "N",
+				"SET_META_DESCRIPTION" => "N",
+				"SET_LAST_MODIFIED" => "N",
+				"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+				"ADD_SECTIONS_CHAIN" => "N",
+				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+				"PARENT_SECTION" => "",
+				"PARENT_SECTION_CODE" => "",
+				"INCLUDE_SUBSECTIONS" => "Y",
+				"STRICT_SECTION_CHECK" => "N",
+				"PAGER_TEMPLATE" => ".default",
+				"DISPLAY_TOP_PAGER" => "N",
+				"DISPLAY_BOTTOM_PAGER" => "N",
+				"PAGER_TITLE" => "Новости",
+				"PAGER_SHOW_ALWAYS" => "N",
+				"PAGER_DESC_NUMBERING" => "N",
+				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+				"PAGER_SHOW_ALL" => "N",
+				"PAGER_BASE_LINK_ENABLE" => "N",
+				"SET_STATUS_404" => "N",
+				"SHOW_404" => "N",
+				"MESSAGE_404" => ""
+			),
+			false
+		);?>
+	</div>
+</section>
+
+<section class="news-section bg-section section-border">
+	<div class="container">
+		<h2 class="news-section-title title">Последние новости</h2>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:news.list",
+			"news_index",
+			array(
+				"COMPONENT_TEMPLATE" => "news_index",
+				"IBLOCK_TYPE" => "-",
+				"IBLOCK_ID" => "12",
+				"NEWS_COUNT" => "3",
+				"SORT_BY1" => "SORT",
+				"SORT_ORDER1" => "ASC",
+				"SORT_BY2" => "ACTIVE_FROM",
+				"SORT_ORDER2" => "DESC",
+				"FILTER_NAME" => "",
+				"FIELD_CODE" => array(
+					0 => "",
+					1 => "",
+				),
+				"PROPERTY_CODE" => array(
+					0 => "SVG",
+					1 => "LINK",
+				),
+				"CHECK_DATES" => "Y",
+				"DETAIL_URL" => "",
+				"AJAX_MODE" => "N",
+				"AJAX_OPTION_JUMP" => "N",
+				"AJAX_OPTION_STYLE" => "Y",
+				"AJAX_OPTION_HISTORY" => "N",
+				"AJAX_OPTION_ADDITIONAL" => "",
+				"CACHE_TYPE" => "A",
+				"CACHE_TIME" => "36000000",
+				"CACHE_FILTER" => "N",
+				"CACHE_GROUPS" => "Y",
+				"PREVIEW_TRUNCATE_LEN" => "",
+				"ACTIVE_DATE_FORMAT" => "d.m.Y",
+				"SET_TITLE" => "N",
+				"SET_BROWSER_TITLE" => "N",
+				"SET_META_KEYWORDS" => "N",
+				"SET_META_DESCRIPTION" => "N",
+				"SET_LAST_MODIFIED" => "N",
+				"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+				"ADD_SECTIONS_CHAIN" => "N",
+				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+				"PARENT_SECTION" => "",
+				"PARENT_SECTION_CODE" => "",
+				"INCLUDE_SUBSECTIONS" => "Y",
+				"STRICT_SECTION_CHECK" => "N",
+				"PAGER_TEMPLATE" => ".default",
+				"DISPLAY_TOP_PAGER" => "N",
+				"DISPLAY_BOTTOM_PAGER" => "N",
+				"PAGER_TITLE" => "Новости",
+				"PAGER_SHOW_ALWAYS" => "N",
+				"PAGER_DESC_NUMBERING" => "N",
+				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+				"PAGER_SHOW_ALL" => "N",
+				"PAGER_BASE_LINK_ENABLE" => "N",
+				"SET_STATUS_404" => "N",
+				"SHOW_404" => "N",
+				"MESSAGE_404" => ""
+			),
+			false
+		);?>
+	</div>
+</section>
+
+<section class="partners-section">
+	<div class="container">
+		<h2 class="partners-title title">Информационные ресурсы</h2>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:news.list",
+			"partners_slider",
+			array(
+				"COMPONENT_TEMPLATE" => "partners_slider",
+				"IBLOCK_TYPE" => "-",
+				"IBLOCK_ID" => "17",
 				"NEWS_COUNT" => "20",
 				"SORT_BY1" => "SORT",
 				"SORT_ORDER1" => "ASC",
