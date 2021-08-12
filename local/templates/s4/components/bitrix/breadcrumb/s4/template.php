@@ -18,13 +18,13 @@ $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
-	$arrow = '<i class="breadcrumbs-icon las la-long-arrow-alt-right"></i>';
+	$arrow = '<i class="breadcrumbs-icon fa fa-angle-right"></i>';
 
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
 		$strReturn .= '
 			<li class="breadcrumbs-item" id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<a class="breadcrumbs-link" href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">'.$title.$arrow.'</a>
+				<a class="breadcrumbs-link" href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">'.$title.'</a>'.$arrow.'
 				<meta itemprop="position" content="'.($index + 1).'" />
 			</li>';
 	}
