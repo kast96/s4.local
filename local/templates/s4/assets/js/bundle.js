@@ -274,6 +274,39 @@ function initSlideParnters() {
     });
 }
 
+function initSlideGallery() {
+    $(".js-slider-gallery").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $pager = $element.find('.js-slider-pager'),
+            $item = $list.find('.js-slider-item');
+
+        if ($item.length > 1) {
+            $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+                nav: true,
+                autoHeight: false,
+                margin: 30,
+                smartSpeed: 500,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    720: {
+                        items: 2,
+
+                    },
+                    992: {
+                        items: 3,
+                    },
+                },
+                navContainer: $buttons,
+                dotsContainer: $pager,
+            }));
+        }
+    });
+}
+
 $(document).ready(function () {
     $(window).resize(function(){
         initAdaptiveMenu();
@@ -288,4 +321,5 @@ $(document).ready(function () {
     initPopupFeedback();
     initSliderBanner();
     initSlideParnters();
+    initSlideGallery();
 });

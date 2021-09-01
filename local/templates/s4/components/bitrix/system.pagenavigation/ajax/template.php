@@ -26,20 +26,19 @@ if ($showedItemsCount > $arResult['NavRecordCount']) {
 	<?if($arResult['NavPageNomer'] < $arResult["NavPageCount"]):?>
 		<a class="load-more load-more-link js-pagen-ajax" href="javascript:;">
 			<span class="load-more-switcher switcher">Показать еще</span>
-			<i class="load-more-icon las la-redo-alt"></i>
+			<i class="load-more-icon fa fa-redo-alt"></i>
 		</a>
 	<?endif?>
 	<div class="pager-container">
-		<span class="pager-quantity">Показано <?=$showedItemsCount?> из <?=$arResult['NavRecordCount']?> товаров</span>
 		<ul class="pager JS-AjaxMore-Pager">
 			<?//arrow left?>
 			<li class="pager-item<?=($arResult['NavPageNomer'] == 1) ? ' pager-item_default' : ''?>">
 				<?if($arResult['NavPageNomer'] == 1):?>
 					<span class="pager-link pager-link_side">
 				<?else:?>
-					<a class="pager-link pager-link_side" href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"]-1?>">
+					<a class="pager-link pager-link_side" href="<?=$arResult["sUrlPath"]?><?if($arResult["NavNum"] > 1):?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"]-1?><?endif?>">
 				<?endif?>
-					<i class="pager-icon las la-arrow-left"></i>
+					<i class="pager-icon fa fa-arrow-left"></i>
 				<?if($arResult['NavPageNomer'] == 1):?>
 					</span>
 				<?else:?>
@@ -50,7 +49,7 @@ if ($showedItemsCount > $arResult['NavRecordCount']) {
 			<?//1?>
 			<li class="pager-item<?=($arResult['NavPageNomer'] == 1) ? ' pager-item_active' : ''?>">
 				<?if($arResult['NavPageNomer'] != 1):?>
-					<a class="pager-link" href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=1">
+					<a class="pager-link" href="<?=$arResult["sUrlPath"]?>">
 				<?else:?>
 					<span class="pager-link">
 				<?endif?>
@@ -115,7 +114,7 @@ if ($showedItemsCount > $arResult['NavRecordCount']) {
 				<?else:?>
 					<a class="pager-link pager-link_side js-pagen-next" href="<?=$arResult["sUrlPath"]?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"]+1?>">
 				<?endif?>
-					<i class="pager-icon las la-arrow-right"></i>
+					<i class="pager-icon fa fa-arrow-right"></i>
 				<?if($arResult['NavPageNomer'] == $arResult["NavPageCount"]):?>
 					</span>
 				<?else:?>
