@@ -4,12 +4,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 use \Bitrix\Main\Localization\Loc;
 Loc::loadMessages(__FILE__);
 ?>
-<div class="bx-auth">
-	<?if ($arParams["~AUTH_RESULT"]):?>
-		<div class="alert alert-success"><?=$arParams["~AUTH_RESULT"]?></div>
+<div class="bx-auth js-form auth-form">
+	<?if($arParams["AUTH_RESULT"]["TYPE"] == 'SUCCESS'):?>
+		<div class="alert alert-success"><?=$arParams["~AUTH_RESULT"]["MESSAGE"]?></div>
 	<?else:?>
-		<?if ($arResult["ERROR_MESSAGE"]):?>
-			<div class="alert alert-danger"><?=$arResult["ERROR_MESSAGE"]?></div>
+		<?if ($arParams["AUTH_RESULT"]["TYPE"] == 'ERROR'):?>
+			<div class="alert alert-danger"><?=$arParams["~AUTH_RESULT"]["MESSAGE"]?></div>
 		<?endif?>
 
 		<form name="form_auth" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
@@ -49,6 +49,7 @@ Loc::loadMessages(__FILE__);
 				<?endif?>
 				
 				<?if ($arResult['STORE_PASSWORD'] == 'Y'):?>
+					<?/*
 					<div class="field field-remember">
 						<label class="field-remember-label checkbox-field">
 							<span class="checkbox">
@@ -56,6 +57,16 @@ Loc::loadMessages(__FILE__);
 								<i class="checkbox-check fa fa-check" aria-hidden="true"></i>
 							</span>
 							<span class="field-remember-text"><?=Loc::getMessage('AUTH_REMEMBER_ME')?></span>
+						</label>
+					</div>
+					*/?>
+					<div class="field field-remember field_simple">
+						<label class="switch">
+							<input class="switch-checkbox" type="checkbox" name="USER_REMEMBER" value="Y" checked="checked" />
+							<span class="switch-decor">
+								<span class="switch-icon"></span>
+							</span>
+							<span class="field-remember-label switch-label"><?=Loc::getMessage("AUTH_REMEMBER_ME")?></span>
 						</label>
 					</div>
 				<?endif?>
@@ -66,7 +77,7 @@ Loc::loadMessages(__FILE__);
 						<span class="switch-decor">
 							<span class="switch-icon"></span>
 						</span>
-						<span class="switch-label"><?=Loc::getMessage("AUTH_I_AGREE_POLITIC")?> <a class="switch-label-link" target="_blank" href="<?=CEwpDykat::GetOption('policy_link')?>"><?=Loc::getMessage("AUTH_AGREE_POLITIC_NAME")?></a></span>
+						<span class="switch-label"><?=Loc::getMessage("AUTH_I_AGREE_POLITIC")?> <a class="switch-label-link" target="_blank" href="<?=CKastS4::GetOption('policy_link')?>"><?=Loc::getMessage("AUTH_AGREE_POLITIC_NAME")?></a></span>
 					</label>
 				</div>
 
@@ -88,32 +99,6 @@ Loc::loadMessages(__FILE__);
 					array('HIDE_ICONS' => 'Y')
 				);?>
 			<?endif?>
-
-			<div class="socials-login mob-form-container">
-				<span class="socials-login-title">Войти как пользователь</span>
-				<ul class="socials-login-list">
-					<li class="socials-login-item">
-						<a class="socials-login-link" href="#">
-							<i class="socials-login-icon fab fa-vk"></i>ВКонтакте
-						</a>
-					</li>
-					<li class="socials-login-item">
-						<a class="socials-login-link" href="#">
-							<i class="socials-login-icon socials-login-icon_fb fab fa-facebook-f"></i>Facebook
-						</a>
-					</li>
-					<li class="socials-login-item">
-						<a class="socials-login-link" href="#">
-							<i class="socials-login-icon socials-login-icon_ok fab fa-odnoklassniki"></i>Odnoklassniki
-						</a>
-					</li>
-					<li class="socials-login-item">
-						<a class="socials-login-link" href="#">
-							<i class="socials-login-icon socials-login-icon_google"></i>Google
-						</a>
-					</li>
-				</ul>
-			</div>
 		</form>
 	<?endif?>
 </div>

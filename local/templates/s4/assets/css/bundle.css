@@ -529,6 +529,75 @@ textarea:focus {
 	color: #A0A0A0;
 }
 
+.checkbox {
+	position: relative; }
+	.checkbox-field {
+	  display: flex; }
+	.checkbox-input {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 0;
+	  opacity: 0; }
+	.checkbox-check {
+	  display: inline-block;
+	  width: 18px;
+	  height: 18px;
+	  margin-right: 8px;
+	  background-color: #fff;
+	  border: 1px solid #e6e6e6;
+	  border-radius: 2px;
+	  line-height: 16px;
+	  font-size: 10px;
+	  color: transparent;
+	  text-align: center; }
+	  .checkbox-check:hover {
+		cursor: pointer; }
+	.checkbox-label {
+	  color: #8e8e8e;
+	  cursor: pointer; }
+	.checkbox-input:checked + .checkbox-check {
+	  background-color: #335aa6;
+	  border-color: #335aa6;
+	  color: #fff; }
+	.checkbox-input:checked ~ .checkbox-label {
+	  color: #335aa6; }
+	.checkbox_simple .checkbox-check {
+	  width: 22px;
+	  height: 22px;
+	  line-height: 20px; }
+  
+  .radio {
+	position: relative;
+	display: flex;
+	align-items: center; }
+	.radio-item {
+	  margin-bottom: 14px; }
+	.radio-field {
+	  display: flex;
+	  align-items: center; }
+	  .radio-field:hover {
+		cursor: pointer; }
+	.radio-input {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 0;
+	  opacity: 0; }
+	.radio-check {
+	  display: inline-block;
+	  width: 18px;
+	  height: 18px;
+	  margin-right: 7px;
+	  border: 1px solid #e1e1e1;
+	  border-radius: 50%;
+	  text-align: center;
+	  background-color: #fff; }
+	.radio-input:checked + .radio-check {
+	  border: 5px solid #335aa6; }
+	.radio-input:checked ~ .radio-label {
+	  color: #335aa6; }
+
 .button {
   position: relative;
   display: inline-block;
@@ -1985,4 +2054,9 @@ label.form-error {
 	max-width: 800px;
 	margin: 0 auto;
 	margin-bottom: 30px;
+}
+
+
+.auth-form {
+	margin-bottom: 80px;
 }
