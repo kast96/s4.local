@@ -36,7 +36,7 @@ if ($showedItemsCount > $arResult['NavRecordCount']) {
 				<?if($arResult['NavPageNomer'] == 1):?>
 					<span class="pager-link pager-link_side">
 				<?else:?>
-					<a class="pager-link pager-link_side" href="<?=$arResult["sUrlPath"]?><?if($arResult["NavNum"] > 1):?>?<?=$strNavQueryString?>PAGEN_<?=$arResult["NavNum"]?>=<?=$arResult["NavPageNomer"]-1?><?endif?>">
+					<a class="pager-link pager-link_side" href="<?=$arResult["sUrlPath"]?>?<?=($arResult["NavPageNomer"] > 2) ? $strNavQueryString.'PAGEN_'.$arResult["NavNum"].'='.($arResult["NavPageNomer"]-1) : $arResult["NavQueryString"]?>">
 				<?endif?>
 					<i class="pager-icon fa fa-arrow-left"></i>
 				<?if($arResult['NavPageNomer'] == 1):?>
@@ -49,7 +49,7 @@ if ($showedItemsCount > $arResult['NavRecordCount']) {
 			<?//1?>
 			<li class="pager-item<?=($arResult['NavPageNomer'] == 1) ? ' pager-item_active' : ''?>">
 				<?if($arResult['NavPageNomer'] != 1):?>
-					<a class="pager-link" href="<?=$arResult["sUrlPath"]?>">
+					<a class="pager-link" href="<?=$arResult["sUrlPath"]?>?<?=$arResult["NavQueryString"]?>">
 				<?else:?>
 					<span class="pager-link">
 				<?endif?>
