@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Поиск");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "ajax",
 		"PAGER_TITLE" => "Результаты поиска",
-		"PAGE_RESULT_COUNT" => "5",
+		"PAGE_RESULT_COUNT" => "20",
 		"RESTART" => "N",
 		"SHOW_WHEN" => "N",
 		"SHOW_WHERE" => "N",
