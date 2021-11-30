@@ -2060,3 +2060,32 @@ label.form-error {
 .auth-form {
 	margin-bottom: 80px;
 }
+
+
+.contacts {
+	margin-bottom: 80px;
+}
+
+.contacts-info {
+	margin-bottom: 40px;
+}
+
+.contacts-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.contacts-icon {
+	width: 30px;
+	margin-right: 20px;
+}
+
+.contacts-icon .icon {
+	font-size: 30px;
+	color: #325A97;
+}
+
+.map {
+	height: 400px;
+}
