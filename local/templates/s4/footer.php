@@ -76,22 +76,26 @@ Loc::loadMessages(__FILE__);
 					);?>
 				</div>
 				<div class="footer-col footer-col_contacts">
+					<?
+					$arPhones = CKastS4::GetPhonesArray();
+					$email = CKastS4::GetEmail();
+					$address = CKastS4::GetAddress();
+					?>
 					<div class="footer-contacts">
 						<div class="footer-contacts-info">
 							<div class="footer-title">Контакты</div>
-							<div class="footer-phone">
-								<a href="tel:8415642955">(84156) 4-29-55</a>
-							</div>
-							<div class="footer-phone">
-								<a href="tel:8415642956">(84156) 4-29-56</a>
-							</div>
+							<?foreach ($arPhones as $arPhone):?>
+								<div class="footer-phone">
+									<a href="tel:<?=$arPhone['TEL']?>"><?=$arPhone['PHONE']?></a>
+								</div>
+							<?endforeach?>
 							<div class="footer-email">
 								<i class="footer-menu-icon footer-menu-icon--left fa fa-envelope"></i>
-								<a href="mailto:shkola414@yandex.ru">shkola414@yandex.ru</a>
+								<a href="mailto:<?=$email?>"><?=$email?></a>
 							</div>
 							<div class="footer-address">
 								<i class="footer-menu-icon footer-menu-icon--left fa fa-map-marker-alt"></i>
-								<span>442246 Пензенская обл., г.Каменка, ул. Чернышевского 6</span>
+								<span><?=$address?></span>
 							</div>
 						</div>
 					</div>

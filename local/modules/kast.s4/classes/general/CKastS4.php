@@ -59,108 +59,28 @@ class CKastS4 {
 		return $childs;
 	}
 
-	public static function GetLikes($arOrder = array('ID' => 'ASC'), $arFilter = array(), $arSelect = array('*')) {
-		if (!count($arOrder)) {
-			$arOrder = array('ID' => 'ASC');
+	public function GetPhonesArray() {
+		$phones = unserialize(self::GetOption('phones'));
+		foreach ($phones as &$phone) {
+			$phone = self::GetPhoneArray($phone);
 		}
+		unset($phone);
 
-		if (!count($arSelect)) {
-			$arSelect = array('*');
-		}
-
-		if (!in_array('ID', $arSelect)) {
-			$arSelect[] = 'ID';
-		}
-
-		if (!$hlblock_id = self::GetOption('likes_hl')) {
-			return false;
-		}
-
-		$hlblock = HL\HighloadBlockTable::getById($hlblock_id)->fetch();
-		$entity = HL\HighloadBlockTable::compileEntity($hlblock);
-		$entityClass = $entity->getDataClass();
-
-		$rsLikes = $entityClass::getList(array(
-			'select' => $arSelect,
-			'order' => $arOrder,
-			'filter' => $arFilter,
-		));
-
-		while($arLike = $rsLikes->fetch()) {
-			$arResult[$arLike['ID']] = $arLike;
-		}
-
-		return $arResult;
-	}
-	
-	public static function GetLikesGroup($arFilter = array()) {
-		global $USER;
-		$userId = $USER->GetId();
-
-		$arLikes = self::GetLikes(array('ID' => 'ASC'), $arFilter, array('UF_LIKE', 'UF_USER'));
-		$arResult['LIKE']['COUNT'] = $arResult['DISLIKE']['COUNT'] = 0;
-
-		foreach ($arLikes as $arLike) {
-			if ($arLike['UF_LIKE'] == 1) {
-				$arResult['LIKE']['COUNT']++;
-			} else {
-				$arResult['DISLIKE']['COUNT']++;
-			}
-
-			if ($userId && $arLike['UF_USER'] == $userId) {
-				$arResult['USER_LIKE'] = ($arLike['UF_LIKE'] == 1) ? true : false;
-			}
-		}
-
-		return $arResult;
+		return $phones;
 	}
 
-	public static function UpdateLike($id, $arFields) {
-		if (!$hlblock_id = self::GetOption('likes_hl')) {
-			return false;
-		}
-
-		$hlblock = HL\HighloadBlockTable::getById($hlblock_id)->fetch();
-		$entity = HL\HighloadBlockTable::compileEntity($hlblock);
-		$entityClass = $entity->getDataClass();
-
-		$result = $entityClass::update($id, $arFields);
-
-		return $result;
-	}
-
-	public static function AddLike($object, $entity, $user, $like) {
-		if (!$hlblock_id = self::GetOption('likes_hl')) {
-			return false;
-		}
-
-		$hlblock = HL\HighloadBlockTable::getById($hlblock_id)->fetch();
-		$hlentity = HL\HighloadBlockTable::compileEntity($hlblock);
-		$entityClass = $hlentity->getDataClass();
-
-		$arFields = array(
-			"UF_OBJECT" => $object,
-			"UF_ENTITY" => $entity,
-			"UF_USER" => $user,
-			"UF_LIKE" => $like,
+	public function GetPhoneArray($phone) {
+		return array(
+			'PHONE' => $phone,
+			'TEL' => preg_replace('/[^0-9]/', '', $phone),
 		);
-
-		$result = $entityClass::add($arFields);
-
-		return $result;
 	}
 
-	public static function DeleteLike($id) {
-		if (!$hlblock_id = self::GetOption('likes_hl')) {
-			return false;
-		}
+	public function GetEmail() {
+		return self::GetOption('email');
+	}
 
-		$hlblock = HL\HighloadBlockTable::getById($hlblock_id)->fetch();
-		$entity = HL\HighloadBlockTable::compileEntity($hlblock);
-		$entityClass = $entity->getDataClass();
-
-		$result = $entityClass::delete($id);
-
-		return $result;
+	public function GetAddress() {
+		return self::GetOption('address');
 	}
 }

@@ -57,16 +57,19 @@ if ($RIGHT_R || $RIGHT_W):
             'TYPE' => 'text',
         ),
         array(
-            'ID' => 'likes_hl',
-            'NAME' => Loc::getMessage('KAST_S4_OPTIONS_LIKES_HL'),
-            'TYPE' => 'selectbox',
-            'VALUES' => $arHLBlocks,
+            'ID' => 'phones',
+            'NAME' => Loc::getMessage('KAST_S4_OPTIONS_PHONES'),
+            'TYPE' => 'phones',
         ),
         array(
-            'ID' => 'comments_iblock',
-            'NAME' => Loc::getMessage('KAST_S4_OPTIONS_COMMENTS_IBLOCK'),
-            'TYPE' => 'selectbox',
-            'VALUES' => $arIBlocks,
+            'ID' => 'email',
+            'NAME' => Loc::getMessage('KAST_S4_OPTIONS_EMAIL'),
+            'TYPE' => 'text',
+        ),
+        array(
+            'ID' => 'address',
+            'NAME' => Loc::getMessage('KAST_S4_OPTIONS_ADDRESS'),
+            'TYPE' => 'text',
         ),
 
         array(
@@ -110,9 +113,19 @@ if ($RIGHT_R || $RIGHT_W):
         {
             foreach($arSettingsOptions as $arOption)
             {
-                $val = trim($_REQUEST[$arOption['ID']], " \t\n\r");
-                if($arOption['TYPE']=="checkbox" && $val!="Y") {
-                    $val="N";
+                if($arOption['TYPE']=="phones") {
+                    $val = array();
+                    foreach ($_REQUEST[$arOption['ID']] as $value) {
+                        if ($value) {
+                            $val[] = $value;
+                        }
+                    }
+                    $val = serialize($val);
+                } else {
+                    $val = trim($_REQUEST[$arOption['ID']], " \t\n\r");
+                    if($arOption['TYPE']=="checkbox" && $val!="Y") {
+                        $val="N";
+                    }
                 }
                 COption::SetOptionString($module_id, $arOption['ID'], $val, $arOption['NAME']);
             }
@@ -144,7 +157,6 @@ if ($RIGHT_R || $RIGHT_W):
 
         foreach($arSettingsOptions as $arOption):
             $val = COption::GetOptionString($module_id, $arOption['ID']);
-            //$type = $arOption['TYPE'];
         ?>
         <tr>
             <td width="40%" nowrap <?=($arOption['TYPE']=="textarea") ? 'class="adm-detail-valign-top"' : ''?>>
@@ -152,6 +164,16 @@ if ($RIGHT_R || $RIGHT_W):
             <td width="60%">
                 <?
                     switch ($arOption['TYPE']) {
+                        case 'phones':
+                            $val = unserialize($val);
+                            $count = (is_array($val) && count($val)) ? count($val) + 1 : 2;
+                            for ($i=0; $i < $count; $i++) {
+                                ?><div>
+                                    <input type="text" maxlength="255" name="<?=htmlspecialcharsbx($arOption['ID'])?>[<?=$i?>]" value="<?=($val[$i]) ? htmlspecialcharsbx($val[$i]) : ''?>">
+                                </div><?
+                            }
+                            break;
+
                         case 'checkbox':
                             ?><input type="checkbox" name="<?=htmlspecialcharsbx($arOption['ID'])?>" id="<?=htmlspecialcharsbx($arOption['ID'])?>" value="Y"<?=($val=="Y") ? ' checked' : ''?>><?
                             break;

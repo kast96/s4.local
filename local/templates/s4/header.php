@@ -71,6 +71,7 @@ $context = \Bitrix\Main\Application::getInstance()->getContext();
 		//$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/add2config.js");
 		//$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/main.js");
 		//$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/custom.js");
+		$instance->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU");
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/bundle.js");
 	?>
 </head>
@@ -140,24 +141,30 @@ $context = \Bitrix\Main\Application::getInstance()->getContext();
 								</div>
 							</form>
 						</div>
+						<?
+						$arPhones = CKastS4::GetPhonesArray();
+						$email = CKastS4::GetEmail();
+						?>
 						<div class="header-panel-item header-panel-item-contacts">
 							<div class="header-contacts">
 								<div class="header-main-contact-container">
-									<a href="tel:8415642955" class="header-main-contact">
-										(84156) 4-29-55
+									<a href="tel:<?=current($arPhones)['TEL']?>" class="header-main-contact">
+										<?=current($arPhones)['PHONE']?>
 										<i class="header-menu-icon fa fa-angle-down"></i>
 									</a>
 									<ul class="header-contacts-list">
+										<?foreach ($arPhones as $arPhone):?>
+											<li class="header-contacts-item">
+												<a href="tel:<?=$arPhone['TEL']?>" class="header-contact">
+													<i class="header-menu-icon header-menu-icon--left fa fa-phone"></i>
+													<?=$arPhone['PHONE']?>
+												</a>
+											</li>
+										<?endforeach?>
 										<li class="header-contacts-item">
-											<a href="tel:8415642956" class="header-contact">
-												<i class="header-menu-icon header-menu-icon--left fa fa-phone"></i>
-												(84156) 4-29-56
-											</a>
-										</li>
-										<li class="header-contacts-item">
-											<a href="mailto:shkola414@yandex.ru" class="header-contact">
+											<a href="mailto:<?=$email?>" class="header-contact">
 												<i class="header-menu-icon header-menu-icon--left fa fa-envelope"></i>
-												shkola414@yandex.ru
+												<?=$email?>
 											</a>
 										</li>
 										<li class="header-contacts-item header-contacts-item--socials">
