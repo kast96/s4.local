@@ -4,6 +4,8 @@ use Bitrix\Main\Loader;
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Контакты');
 
+CModule::includeModule('kast.s4');
+
 $arPhones = CKastS4::GetPhonesArray();
 $email = CKastS4::GetEmail();
 $address = CKastS4::GetAddress();

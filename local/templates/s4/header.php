@@ -7,6 +7,7 @@ global $USER;
 Loc::loadMessages(__FILE__);
 
 CModule::includeModule('iblock');
+CModule::includeModule('kast.s4');
 
 $context = \Bitrix\Main\Application::getInstance()->getContext();
 ?>

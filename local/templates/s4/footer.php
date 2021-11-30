@@ -2,6 +2,8 @@
 <?
 use \Bitrix\Main\Localization\Loc;
 Loc::loadMessages(__FILE__);
+
+CModule::includeModule('kast.s4');
 ?>
 
 			<?if($APPLICATION->GetCurPage(false) != '/' && $APPLICATION->GetProperty('widepage') != 'Y'):?>
