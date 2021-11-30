@@ -750,6 +750,12 @@ label.form-error {
     border-color: #f5c6cb;
 }
 
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
 .is-send::before {
 	content: '';
 	display: block;
@@ -2088,4 +2094,29 @@ label.form-error {
 
 .map {
 	height: 400px;
+}
+
+
+.search-page {
+	margin-bottom: 80px;
+}
+
+.search-page-form {
+	margin-bottom: 40px;
+}
+
+.search-page-form-language-guess {
+	margin-bottom: 40px;
+}
+
+.search-page-item {
+	margin-bottom: 40px;
+}
+
+.search-page-title {
+	color: #2a364d;
+}
+
+.search-page-body {
+	margin-top: 6px;
 }
