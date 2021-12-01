@@ -10,6 +10,29 @@ CModule::includeModule('iblock');
 CModule::includeModule('kast.s4');
 
 $context = \Bitrix\Main\Application::getInstance()->getContext();
+
+$arBadEye = array(
+	array(
+		'ID' => 'theme',
+		'NAME' => 'Цветовая схема',
+		'VALUES' => array('default', 'dark', 'light'),
+	),
+	array(
+		'ID' => 'font-size',
+		'NAME' => 'Размер шрифта',
+		'VALUES' => array('small', 'default', 'big'),
+	),
+	array(
+		'ID' => 'images',
+		'NAME' => 'Изображения',
+		'VALUES' => array('default', 'bw', 'none'),
+	),
+);
+
+$strBadEyeBodyData = '';
+foreach ($arBadEye as $arItem) {
+	$strBadEyeBodyData .= ' data-'.$arItem['ID'].'="'.$_COOKIE['eyebad-'.$arItem['ID']].'"';
+}
 ?>
 
 <!doctype html>
@@ -73,13 +96,34 @@ $context = \Bitrix\Main\Application::getInstance()->getContext();
 		//$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/main.js");
 		//$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/custom.js");
 		$instance->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU");
+		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/jquery.cookie.js");
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/bundle.js");
 	?>
 </head>
-<body>
+<body <?=$strBadEyeBodyData?>>
 	<div class="panel"><?$APPLICATION->ShowPanel()?></div>
 	<div class="wrapper">
 		<header class="header">
+			<div class="badeye js-badeye">
+				<div class="container">
+					<div class="row">
+						<?foreach ($arBadEye as $arItem):?>
+							<div class="col-12 col-md-4">
+								<div class="badeye-item">
+									<div class="badeye-title"><?=$arItem['NAME']?></div>
+									<div class="badeye-controls">
+										<?foreach ($arItem['VALUES'] as $value):?>
+											<a class="badeye-control js-badeye-control<?=($_COOKIE['eyebad-'.$arItem['ID']] == $value || (!$_COOKIE['eyebad-'.$arItem['ID']] && $value == 'default')) ? ' is-active' : ''?>" data-id="<?=$arItem['ID']?>" data-value="<?=$value?>">
+												<span class="badeye-<?=$arItem['ID']?> <?=$value?>"></span>
+											</a>
+										<?endforeach?>
+									</div>
+								</div>
+							</div>
+						<?endforeach?>
+					</div>
+				</div>
+			</div>
 			<div class="header-top">
 				<div class="header-top-block container">
 					<div class="header-top-menu">
@@ -105,7 +149,7 @@ $context = \Bitrix\Main\Application::getInstance()->getContext();
 					<ul class="header-actions header-menu">
 						<li class="header-menu-item">	
 							<div class="header-bad-eye">
-								<a class="header-actions-place header-menu-link" href="javascript:;">
+								<a class="header-actions-place header-menu-link js-badeye-switcher" href="javascript:;">
 									<i class="header-menu-icon header-menu-icon--left fa fa-eye"></i>
 									<span class="header-menu-switcher switcher">Для слабовидящих</span>
 								</a>

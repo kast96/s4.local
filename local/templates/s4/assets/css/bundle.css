@@ -2120,3 +2120,102 @@ label.form-error {
 .search-page-body {
 	margin-top: 6px;
 }
+
+
+.badeye {
+	display: none;
+	padding: 20px;
+}
+
+.badeye.is-active {
+	display: block;
+}
+
+.badeye-item {
+	margin-bottom: 20px;
+}
+
+.badeye-title {
+	font-weight: 600;
+	color: #2A364d;
+	margin-bottom: 6px;
+}
+
+.badeye-controls {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.badeye-control {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	padding: 1px;
+	cursor: pointer;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.badeye-control,
+.badeye-control:hover {
+	color: #2A364d;
+}
+
+.badeye-control.is-active {
+	cursor: default;
+	border-color: #000;
+}
+
+.badeye-theme,
+.badeye-font-size,
+.badeye-images {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+
+.badeye-theme.default {background-color: #325A97;}
+.badeye-theme.dark {background-color: #333;}
+.badeye-theme.light {background-color: #eee;}
+
+.badeye-font-size {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badeye-font-size::after {
+	content: 'Aa';
+}
+
+.badeye-font-size.small {font-size: 12px;}
+.badeye-font-size.default {font-size: 16px;}
+.badeye-font-size.big {font-size: 20px;}
+
+.badeye-images {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.badeye-images.default {
+	background-image: url('/images/badeye/images-default.png');
+}
+
+.badeye-images.bw {
+	background-image: url('/images/badeye/images-default.png');
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+
+.badeye-images.none {
+	background-image: url('/images/badeye/images-none.png');
+}
