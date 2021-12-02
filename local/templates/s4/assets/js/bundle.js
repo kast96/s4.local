@@ -307,10 +307,13 @@ function initSlideGallery() {
 	});
 }
 
+if (typeof(ymaps) == 'function') {
+	ymaps.ready(init);
+} else {
+	console.warn('Невозможно инициализировать яндекс карту');
+}
 
-ymaps.ready(init);
-
-function init () {
+function init() {
 	$('.js-map').each(function () {
 		var centerCoord = $(this).data('centercoord') || [59.93914514163674,30.33349282507063],
 			idMap = $(this).data('mapid'),
