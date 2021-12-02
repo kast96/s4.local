@@ -1071,10 +1071,10 @@ label.form-error {
     color: #2a364d;
 }
 
-.mob-list-link:hover {
+/*.mob-list-link:hover {
     color: #335aa6;
     background-color: #f9f9fa;
-}
+}*/
 
 .mob-list-icon {
     margin-left: auto;
@@ -1158,9 +1158,9 @@ label.form-error {
     color: #8e8f91;
 }
 
-.mob-list-child-link:hover {
+/*.mob-list-child-link:hover {
     color: #335aa6;
-}
+}*/
 
 .mob-block.mob-is-levels .mob-nav {
     height: 0;

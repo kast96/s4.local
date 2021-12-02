@@ -32,9 +32,21 @@
 .body[data-theme="dark"] .field-label,
 .body[data-theme="dark"] .main-menu-link
 .body[data-theme="dark"] .menu-simple-link,
-.body[data-theme="dark"] .menu-simple .main-menu-link
+.body[data-theme="dark"] .menu-simple .main-menu-link,
+.body[data-theme="dark"] .mob-list-link,
+.body[data-theme="dark"] .mob-list-icon,
+.body[data-theme="dark"] .mob-list-link_back,
+.body[data-theme="dark"] .mob-list-current,
+.body[data-theme="dark"] .mob-list-child-link,
+.body[data-theme="dark"] .mob-info
 {
 	color: #eee;
+}
+
+.body[data-theme="dark"] .mob-menu-icon,
+.body[data-theme="dark"] .close-icon
+{
+	fill: #eee;
 }
 
 .body[data-theme="dark"] .main-menu-link:hover
@@ -54,7 +66,13 @@
 .body[data-theme="dark"] .header-panel,
 .body[data-theme="dark"] .menu-simple .menu-simple-list,
 .body[data-theme="dark"] .menu-simple-item,
-.body[data-theme="dark"] .menu-simple .main-menu-item
+.body[data-theme="dark"] .menu-simple .main-menu-item,
+.body[data-theme="dark"] .mob-block,
+.body[data-theme="dark"] .mob-close-panel,
+.body[data-theme="dark"] .mob-list-item,
+.body[data-theme="dark"] .mob-list-link_back,
+.body[data-theme="dark"] .mob-list-current,
+.body[data-theme="dark"] .mob-info
 {
 	border-color: #666;
 }
@@ -77,7 +95,12 @@
 .body[data-theme="dark"] .header-dropdown-menu,
 .body[data-theme="dark"] .search-container,
 .body[data-theme="dark"] .header-contacts-list,
-.body[data-theme="dark"] .menu-simple
+.body[data-theme="dark"] .menu-simple,
+.body[data-theme="dark"] .mob-block,
+.body[data-theme="dark"] .mob-close-panel,
+.body[data-theme="dark"] .mob-list-main-mobile,
+.body[data-theme="dark"] .mob-child,
+.body[data-theme="dark"] .mob-list-link_back
 {
 	background-color: #333;
 }
@@ -85,7 +108,8 @@
 .body[data-theme="dark"] .header-menu-item:hover .header-menu-link,
 .body[data-theme="dark"] .header-dropdown-link:hover,
 .body[data-theme="dark"] .menu-simple-link:hover,
-.body[data-theme="dark"] .menu-simple .main-menu-link:hover
+.body[data-theme="dark"] .menu-simple .main-menu-link:hover,
+.body[data-theme="dark"] .mob-list-current
 {
 	background-color: #555;
 }
