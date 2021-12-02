@@ -1,0 +1,136 @@
+.body[data-theme="dark"] .header,
+.body[data-theme="dark"] .fancybox-content {
+	background: #444;
+}
+
+.body[data-theme="dark"],
+.body[data-theme="dark"] h1,
+.body[data-theme="dark"] .h1,
+.body[data-theme="dark"] h2,
+.body[data-theme="dark"] .h2,
+.body[data-theme="dark"] h3,
+.body[data-theme="dark"] .h3,
+.body[data-theme="dark"] h4,
+.body[data-theme="dark"] .h4,
+.body[data-theme="dark"] a,
+.body[data-theme="dark"] a:hover,
+.body[data-theme="dark"] .input,
+.body[data-theme="dark"] .logo-title,
+.body[data-theme="dark"] .logo-description,
+.body[data-theme="dark"] .header-menu-link,
+.body[data-theme="dark"] .header-menu-item:hover .header-menu-link,
+.body[data-theme="dark"] .header-dropdown-link,
+.body[data-theme="dark"] .header-dropdown-link:hover,
+.body[data-theme="dark"] .search-input,
+.body[data-theme="dark"] .header-main-contact,
+.body[data-theme="dark"] .header-contacts-text,
+.body[data-theme="dark"] .header-contact,
+.body[data-theme="dark"] .header-contact .header-menu-icon,
+.body[data-theme="dark"] .header-contacts-tilte,
+.body[data-theme="dark"] .socials-icon,
+.body[data-theme="dark"] .button,
+.body[data-theme="dark"] .field-label,
+.body[data-theme="dark"] .main-menu-link
+.body[data-theme="dark"] .menu-simple-link,
+.body[data-theme="dark"] .menu-simple .main-menu-link
+{
+	color: #eee;
+}
+
+.body[data-theme="dark"] .main-menu-link:hover
+{
+	color: #aaa;
+}
+
+.body[data-theme="dark"] hr
+.body[data-theme="dark"] input:focus,
+.body[data-theme="dark"] textarea:focus,
+.body[data-theme="dark"] .input,
+.body[data-theme="dark"] .header-panel-item,
+.body[data-theme="dark"] .search-container,
+.body[data-theme="dark"] .search-button,
+.body[data-theme="dark"] .socials-link,
+.body[data-theme="dark"] .button,
+.body[data-theme="dark"] .header-panel,
+.body[data-theme="dark"] .menu-simple .menu-simple-list,
+.body[data-theme="dark"] .menu-simple-item,
+.body[data-theme="dark"] .menu-simple .main-menu-item
+{
+	border-color: #666;
+}
+
+.body[data-theme="dark"] .main-menu-item-homepage::before
+{
+	background-color: #666;
+}
+
+.body[data-theme="dark"] ::placeholder,
+.body[data-theme="dark"] ::-webkit-input-placeholder,
+.body[data-theme="dark"] :-moz-placeholder,
+.body[data-theme="dark"] ::-moz-placeholder,
+.body[data-theme="dark"] :-ms-input-placeholder
+{
+	color: #999;
+}
+
+.body[data-theme="dark"] .header-top,
+.body[data-theme="dark"] .header-dropdown-menu,
+.body[data-theme="dark"] .search-container,
+.body[data-theme="dark"] .header-contacts-list,
+.body[data-theme="dark"] .menu-simple
+{
+	background-color: #333;
+}
+
+.body[data-theme="dark"] .header-menu-item:hover .header-menu-link,
+.body[data-theme="dark"] .header-dropdown-link:hover,
+.body[data-theme="dark"] .menu-simple-link:hover,
+.body[data-theme="dark"] .menu-simple .main-menu-link:hover
+{
+	background-color: #555;
+}
+
+.body[data-theme="dark"] .header-menu-link,
+.body[data-theme="dark"] .header-dropdown-menu,
+.body[data-theme="dark"] .header-dropdown-list,
+.body[data-theme="dark"] .header-dropdown-item,
+.body[data-theme="dark"] .header-contacts-list,
+.body[data-theme="dark"] .header-contact
+{
+	border-color: #aaa;
+}
+
+.body[data-theme="dark"] .header-dropdown-list
+{
+	border-top: none;
+}
+
+.body[data-theme="dark"] .header-dropdown-list,
+.body[data-theme="dark"] .search-button,
+.body[data-theme="dark"] .header-contacts-list,
+.body[data-theme="dark"] .socials-link,
+.body[data-theme="dark"] .button
+{
+	border-width: 1px;
+	border-style: solid;
+}
+
+.body[data-theme="dark"] .search-button,
+.body[data-theme="dark"] .socials-link,
+.body[data-theme="dark"] .button,
+.body[data-theme="dark"] .switch-checkbox:checked + .switch-decor
+{
+	background-color: #333;
+}
+
+.body[data-theme="dark"] .search-button:hover,
+.body[data-theme="dark"] .socials-link:hover,
+.body[data-theme="dark"] .button:hover
+{
+	background-color: #444;
+}
+
+.body[data-theme="dark"] .switch-decor
+{
+	background-color: #666;
+}

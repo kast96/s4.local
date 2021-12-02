@@ -60,6 +60,7 @@ foreach ($arBadEye as $arItem) {
 		//$instance->addCss(SITE_TEMPLATE_PATH . "/assets/css/common.css");
 		//$instance->addCss(SITE_TEMPLATE_PATH . "/assets/css/custom.css");
 		$instance->addCss(SITE_TEMPLATE_PATH . "/assets/css/bundle.css");
+		$instance->addCss(SITE_TEMPLATE_PATH . "/assets/css/badeye.css");
 
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/libs/jquery/jquery-3.5.1.min.js");
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/libs/OwlCarousel/owl.carousel.min.js");
@@ -100,7 +101,7 @@ foreach ($arBadEye as $arItem) {
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/bundle.js");
 	?>
 </head>
-<body <?=$strBadEyeBodyData?>>
+<body class="body"<?=$strBadEyeBodyData?>>
 	<div class="panel"><?$APPLICATION->ShowPanel()?></div>
 	<div class="wrapper">
 		<header class="header">
