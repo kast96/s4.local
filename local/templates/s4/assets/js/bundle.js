@@ -307,7 +307,8 @@ function initSlideGallery() {
 	});
 }
 
-if (typeof(ymaps) == 'function') {
+console.log(typeof(ymaps));
+if (typeof(ymaps) == 'object') {
 	ymaps.ready(init);
 } else {
 	console.warn('Невозможно инициализировать яндекс карту');
