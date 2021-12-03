@@ -1,3 +1,4 @@
+.body[data-theme="dark"],
 .body[data-theme="dark"] .header,
 .body[data-theme="dark"] .fancybox-content {
 	background: #444;
@@ -38,7 +39,15 @@
 .body[data-theme="dark"] .mob-list-link_back,
 .body[data-theme="dark"] .mob-list-current,
 .body[data-theme="dark"] .mob-list-child-link,
-.body[data-theme="dark"] .mob-info
+.body[data-theme="dark"] .mob-info,
+.body[data-theme="dark"] .footer-menu-link,
+.body[data-theme="dark"] .footer-title,
+.body[data-theme="dark"] .footer-phone a,
+.body[data-theme="dark"] .footer-email a,
+.body[data-theme="dark"] .footer-address span,
+.body[data-theme="dark"] .footer-email .footer-menu-icon,
+.body[data-theme="dark"] .footer-address .footer-menu-icon,
+.body[data-theme="dark"] .footer-bottom
 {
 	color: #eee;
 }
@@ -72,7 +81,10 @@
 .body[data-theme="dark"] .mob-list-item,
 .body[data-theme="dark"] .mob-list-link_back,
 .body[data-theme="dark"] .mob-list-current,
-.body[data-theme="dark"] .mob-info
+.body[data-theme="dark"] .mob-info,
+.body[data-theme="dark"] .footer,
+.body[data-theme="dark"] .footer-body,
+.body[data-theme="dark"] .footer-email
 {
 	border-color: #666;
 }
