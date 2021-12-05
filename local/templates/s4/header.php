@@ -36,7 +36,7 @@ foreach ($arBadEye as $arItem) {
 ?>
 
 <!doctype html>
-<html>
+<html class="html"<?=$strBadEyeBodyData?>>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -101,7 +101,7 @@ foreach ($arBadEye as $arItem) {
 		$instance->addJs(SITE_TEMPLATE_PATH . "/assets/js/bundle.js");
 	?>
 </head>
-<body class="body"<?=$strBadEyeBodyData?>>
+<body class="body">
 	<div class="panel"><?$APPLICATION->ShowPanel()?></div>
 	<div class="wrapper">
 		<header class="header">

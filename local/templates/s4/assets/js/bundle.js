@@ -405,7 +405,7 @@ function initBadEye() {
 		var id = $(this).attr('data-id');
 		var value = $(this).attr('data-value');
 
-		$('body').attr('data-'+id, value);
+		$('html').attr('data-'+id, value);
 		$.cookie('eyebad-'+id, value, cookieOptions);
 		$('.js-badeye-control[data-id="'+id+'"]').removeClass('is-active');
 		$(this).addClass('is-active');
