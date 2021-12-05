@@ -68,6 +68,7 @@ html, body {
 	margin: 0;
 	padding: 0; }
 
+html,
 body {
 	overflow-x: hidden;
 	background-color: #fff;
@@ -81,6 +82,7 @@ h1,
 	margin-bottom: 30px;
 	font-family: 'Montserrat';
 	font-size: 38px;
+	font-size: 2.375rem;
 	font-weight: 600;
 	color: #2a364d; }
 
@@ -89,6 +91,7 @@ h2,
 	margin-bottom: 14px;
 	font-family: 'Montserrat';
 	font-size: 32px;
+	font-size: 2rem;
 	font-weight: 600;
 	color: #2a364d; }
 
@@ -96,6 +99,7 @@ h2,
 	h2,
 	.h2 {
 		font-size: 24px;
+		font-size: 1.5rem;
 	}
 }
 
@@ -104,6 +108,7 @@ h3,
 	margin-bottom: 25px;
 	font-family: 'Montserrat';
 	font-size: 28px;
+	font-size: 1.75rem;
 	font-weight: 600;
 	color: #2a364d; }
 
@@ -111,6 +116,7 @@ h4,
 .h4 {
 	font-family: 'Montserrat';
 	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 600;
 	color: #2a364d; }
 
@@ -191,6 +197,7 @@ textarea:focus {
   background-color: transparent;
   color: #888;
   font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   border: solid #eaeaea;
   border-width: 0 0 1px;
@@ -198,25 +205,35 @@ textarea:focus {
 
 ::placeholder {
   color: #9b9b9b;
-  font-size: 13px; }
+  font-size: 13px;
+  font-size: 0.813rem;
+}
 
 ::-webkit-input-placeholder {
   color: #9b9b9b;
-  font-size: 13px; }
+  font-size: 13px;
+  font-size: 0.813rem;
+}
 
 :-moz-placeholder {
   /* Firefox 18- */
   color: #9b9b9b;
-  font-size: 13px; }
+  font-size: 13px;
+  font-size: 0.813rem;
+}
 
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #9b9b9b;
-  font-size: 13px; }
+  font-size: 13px;
+  font-size: 0.813rem;
+}
 
 :-ms-input-placeholder {
   color: #9b9b9b;
-  font-size: 13px; }
+  font-size: 13px;
+  font-size: 0.813rem;
+}
 
 .wrapper {
   position: relative;
@@ -265,6 +282,7 @@ textarea:focus {
 	text-decoration: none;
 	font-family: 'Montserrat';
 	font-size: 13px;
+	font-size: 0.813rem;
 	font-weight: 400;
 	color: #fff; }
 
@@ -275,6 +293,7 @@ textarea:focus {
 .header-menu-icon {
 	margin-left: 5px;
 	font-size: 12px;
+	font-size: 0.75rem;
 	color: inherit; }
 
 .header-menu-icon--left {
@@ -313,6 +332,7 @@ textarea:focus {
   padding: 13px 17px;
   text-decoration: none;
   font-size: 13px;
+  font-size: 0.813rem;
   color: #a0a0a0;
 }
 
@@ -358,6 +378,7 @@ textarea:focus {
 .logo-title {
 	font-weight: 700;
 	font-size: 24px;
+	font-size: 1.5rem;
 	color: #325A97;
 	text-align: left;
 }
@@ -365,6 +386,7 @@ textarea:focus {
 .logo-description {
 	font-weight: 600;
 	font-size: 16px;
+	font-size: 1rem;
 	color: #2A364D;
 	text-align: left;
 }
@@ -410,6 +432,7 @@ textarea:focus {
 	padding: 12px 20px;
 	border-bottom-width: 0;
 	font-size: 12px;
+	font-size: 0.75rem;
 	color: #a0a0a0;
 }
 
@@ -418,6 +441,7 @@ textarea:focus {
 	background-color: #325A97;
 	border-radius: 100px;
 	font-size: 16px;
+	font-size: 1rem;
 	line-height: 40px;
 	color: #fff;
 }
@@ -439,6 +463,7 @@ textarea:focus {
 	align-items: center;
 	font-weight: 600;
 	font-size: 20px;
+	font-size: 1.25rem;
 	color: #2A364D;
 	padding-bottom: 8px;
 	text-decoration: none;
@@ -451,6 +476,7 @@ textarea:focus {
 .header-contacts-text {
 	font-weight: 500;
 	font-size: 12px;
+	font-size: 0.75rem;
 	color: #A0A0A0;
 }
 
@@ -480,6 +506,7 @@ textarea:focus {
 	height: 40px;
 	font-weight: 500;
 	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 40px;
 	color: #2A364D;
 	text-decoration: none;
@@ -488,6 +515,7 @@ textarea:focus {
 
 .header-contact .header-menu-icon {
 	font-size: 14px;
+	font-size: 0.875rem;
 	margin-right: 10px;
 	color: #325A97;
 }
@@ -499,6 +527,7 @@ textarea:focus {
 .header-contacts-tilte {
 	font-weight: 400;
 	font-size: 12px;
+	font-size: 0.75rem;
 	color: #2A364D;
 	margin-bottom: 10px;
 }
@@ -530,6 +559,7 @@ textarea:focus {
 
 .socials-icon {
 	font-size: 14px;
+	font-size: 0.875rem;
 	color: #A0A0A0;
 }
 
@@ -553,6 +583,7 @@ textarea:focus {
 	  border-radius: 2px;
 	  line-height: 16px;
 	  font-size: 10px;
+	  font-size: 0.625rem;
 	  color: transparent;
 	  text-align: center; }
 	  .checkbox-check:hover {
@@ -614,6 +645,7 @@ textarea:focus {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 11px;
+  font-size: 0.688rem;
   font-weight: 700;
   color: #fff;
   white-space: nowrap;
@@ -665,6 +697,7 @@ textarea:focus {
 .field-label {
 	font-weight: 500;
     font-size: 12px;
+	font-size: 0.75rem;
     color: #a0a0a0;
     white-space: nowrap;
 }
@@ -731,6 +764,7 @@ label.form-error {
 	padding: 2px 10px;
 	color: #949391;
 	font-size: 12px;
+	font-size: 0.75rem;
 	background-color: #fff;
 	white-space: nowrap; }
 
@@ -847,6 +881,7 @@ label.form-error {
     padding: 0 18px;
 	font-weight: 600;
 	font-size: 11px;
+	font-size: 0.688rem;
     line-height: 50px;
     text-decoration: none;
     text-transform: uppercase;
@@ -864,6 +899,7 @@ label.form-error {
 .main-menu-icon i {
 	font-weight: 900;
 	font-size: 8px;
+	font-size: 0.5rem;
 	color: inherit;
 }
 
@@ -933,6 +969,7 @@ label.form-error {
     padding: 13px 17px;
     text-decoration: none;
     font-size: 13px;
+	font-size: 0.813rem;
     line-height: 21px;
     color: #a0a0a0;
 	font-weight: 500;
@@ -1037,11 +1074,13 @@ label.form-error {
 .mob-company-logo .logo-title,
 .main-menu-logo .logo-title {
     font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .mob-company-logo .logo-description,
 .main-menu-logo .logo-description {
     font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .close-icon {
@@ -1066,6 +1105,7 @@ label.form-error {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
+	font-size: 0.75rem;
     line-height: 21px;
     font-weight: 600;
     color: #2a364d;
@@ -1080,6 +1120,7 @@ label.form-error {
     margin-left: auto;
     vertical-align: middle;
     font-size: 12px;
+	font-size: 0.75rem;
     color: #949391;
 }
 
@@ -1121,6 +1162,7 @@ label.form-error {
     min-height: 60px;
     text-transform: uppercase;
     font-size: 12px;
+	font-size: 0.75rem;
     font-weight: 600;
     color: #848484;
     background-color: #fff;
@@ -1140,6 +1182,7 @@ label.form-error {
     padding-right: 15px;
     text-transform: uppercase;
     font-size: 11px;
+	font-size: 0.688rem;
     font-weight: 700;
     color: #2a364d;
     background-color: #f9f9fa;
@@ -1154,6 +1197,7 @@ label.form-error {
     padding: 12px 15px;
     text-decoration: none;
     font-size: 14px;
+	font-size: 0.875rem;
     line-height: 21px;
     color: #8e8f91;
 }
@@ -1170,6 +1214,7 @@ label.form-error {
 .mob-info {
     padding: 20px 15px;
     font-size: 15px;
+	font-size: 0.938rem;
     color: #3e3d3b;
     border-bottom: 1px solid #ebebeb;
 }
@@ -1178,6 +1223,7 @@ label.form-error {
     display: block;
     margin-bottom: 10px;
     font-size: 12px;
+	font-size: 0.75rem;
 }
 
 .mob-menu.child-open .mob-info {
@@ -1246,6 +1292,7 @@ label.form-error {
 .footer-menu-link {
 	font-weight: 600;
 	font-size: 12px;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 	color: #2A364D;
 	text-decoration: none;
@@ -1254,6 +1301,7 @@ label.form-error {
 .footer-title {
 	font-weight: 600;
 	font-size: 12px;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 	color: #2A364D;
 	margin-bottom: 10px;
@@ -1267,6 +1315,7 @@ label.form-error {
 	margin-bottom: 10px;
 	font-weight: 600;
 	font-size: 20px;
+	font-size: 1.25rem;
 	color: #2A364D;
 	text-decoration: none;
 }
@@ -1286,6 +1335,7 @@ label.form-error {
 .footer-address span {
 	font-weight: 600;
 	font-size: 12px;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 	color: #2A364D;
 	text-decoration: none;
@@ -1367,6 +1417,7 @@ label.form-error {
 	justify-content: space-between;
 	padding-top: 50px;
 	font-size: 16px;
+	font-size: 1rem;
 	color: #888;
 }
 
@@ -1401,6 +1452,7 @@ label.form-error {
 	.footer-copyright,
 	.footer-developer {
 		font-size: 14px;
+		font-size: 0.875rem;
 	}
 }
 
@@ -1440,12 +1492,14 @@ label.form-error {
 .main-banner-title {
 	font-weight: 600;
 	font-size: 38px;
+	font-size: 2.375rem;
 	margin-bottom: 28px;
 }
 
 .main-banner-info {
 	font-weight: 400;
 	font-size: 16px;
+	font-size: 1rem;
 	line-height: 20px;
 	color: #CCD9EC;
 	margin-bottom: 50px;
@@ -1485,6 +1539,7 @@ label.form-error {
 	background: transparent;
     color: #fff;
     font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 600;
     margin-right: 10px;
 }
@@ -1538,6 +1593,7 @@ label.form-error {
 	background: transparent;
     color: #fff;
     font-size: 14px;
+	font-size: 0.875rem;
 	width: 36px;
     height: 36px;
     margin-right: 12px;
@@ -1577,6 +1633,7 @@ label.form-error {
 @media screen and (max-width: 767px) {
 	.main-banner-title {
 		font-size: 26px;
+		font-size: 1.625rem;
 	}
 }
 
@@ -1608,6 +1665,7 @@ label.form-error {
 .fast-links-description {
 	font-weight: 500;
 	font-size: 18px;
+	font-size: 1.125rem;
 	color: #A0A0A0;
 	margin-bottom: 30px;
 }
@@ -1650,6 +1708,7 @@ label.form-error {
 	display: block;
 	font-weight: 600;
 	font-size: 18px;
+	font-size: 1.125rem;
 	color: #333;
 }
 
@@ -1710,6 +1769,7 @@ label.form-error {
 	display: block;
 	font-weight: 600;
 	font-size: 20px;
+	font-size: 1.25rem;
 	color: #2A364D;
 	margin-bottom: 10px;
 	text-decoration: none;
@@ -1718,6 +1778,7 @@ label.form-error {
 .news-list-item__date {
 	font-weight: 500;
 	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 17px;
 	color: #A0A0A0;
 	margin-bottom: 20px;
@@ -1726,12 +1787,14 @@ label.form-error {
 .news-list-item__description {
 	font-weight: 500;
 	font-size: 16px;
+	font-size: 1rem;
 	margin-bottom: 30px;
 }
 
 .news-list-item__link {
 	font-weight: 600;
 	font-size: 16px;
+	font-size: 1rem;
 	text-decoration-line: underline;
 	color: #2A364D;
 }
@@ -1804,6 +1867,7 @@ label.form-error {
 .partners-name {
 	font-weight: 600;
 	font-size: 16px;
+	font-size: 1rem;
 	color: #2A364D;
 	margin-bottom: 20px;
 }
@@ -1826,6 +1890,7 @@ label.form-error {
     margin-right: 11px;
     margin-bottom: 4px;
     font-size: 14px;
+	font-size: 0.875rem;
     color: #b8b8b8;
 }
 
@@ -1840,6 +1905,7 @@ label.form-error {
     margin-left: 11px;
     color: #b8b8b8;
 	font-size: 10px;
+	font-size: 0.625rem;
 }
 
 .breadcrumbs-item_more {
@@ -1892,6 +1958,7 @@ label.form-error {
 	display: block;
 	font-weight: 600;
 	font-size: 20px;
+	font-size: 1.25rem;
 	color: #2A364D;
 	margin-bottom: 10px;
 	text-decoration: none;
@@ -1900,6 +1967,7 @@ label.form-error {
 .news-section-item__date {
 	font-weight: 500;
 	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 17px;
 	color: #A0A0A0;
 	margin-bottom: 20px;
@@ -1908,12 +1976,14 @@ label.form-error {
 .news-section-item__description {
 	font-weight: 500;
 	font-size: 16px;
+	font-size: 1rem;
 	margin-bottom: 30px;
 }
 
 .news-section-item__link {
 	font-weight: 600;
 	font-size: 16px;
+	font-size: 1rem;
 	text-decoration-line: underline;
 	color: #2A364D;
 }
@@ -1940,6 +2010,7 @@ label.form-error {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 11px;
+	font-size: 0.688rem;
     line-height: 11px;
     color: #2a364d;
 }
@@ -1947,6 +2018,7 @@ label.form-error {
 .load-more-icon {
     margin-left: 3px;
     font-size: 10px;
+	font-size: 0.625rem;
     color: #2a364d;
 }
 
@@ -1968,6 +2040,7 @@ label.form-error {
 .pager-item {
     margin-right: 9px;
     font-size: 16px;
+	font-size: 1rem;
 }
 
 .pager-link {
@@ -1989,6 +2062,7 @@ label.form-error {
 	position: relative;
     top: -1px;
     font-size: 12px;
+	font-size: 0.75rem;
     color: #2a364d;
 }
 
@@ -2030,6 +2104,7 @@ label.form-error {
 .news-detail__date {
 	font-weight: 500;
 	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 17px;
 	color: #A0A0A0;
 	margin-bottom: 20px;
@@ -2059,6 +2134,7 @@ label.form-error {
 
 .page-404__title {
 	font-size: 128px;
+	font-size: 8rem;
 	font-weight: 600;
 	margin-bottom: 30px;
 }
@@ -2096,6 +2172,7 @@ label.form-error {
 
 .contacts-icon .icon {
 	font-size: 30px;
+	font-size: 1.875rem;
 	color: #325A97;
 }
 
