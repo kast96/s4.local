@@ -307,7 +307,6 @@ function initSlideGallery() {
 	});
 }
 
-console.log(typeof(ymaps));
 if (typeof(ymaps) == 'object') {
 	ymaps.ready(init);
 } else {
