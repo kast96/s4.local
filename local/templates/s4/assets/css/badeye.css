@@ -57,7 +57,22 @@
 .body[data-theme="dark"] .fast-links-item-title,
 .body[data-theme="dark"] .news-list-item__title,
 .body[data-theme="dark"] .news-list-item__date,
-.body[data-theme="dark"] .news-list-item__link
+.body[data-theme="dark"] .news-list-item__link,
+.body[data-theme="dark"] .partners-title,
+.body[data-theme="dark"] .partners-name,
+.body[data-theme="dark"] .breadcrumbs-item,
+.body[data-theme="dark"] .breadcrumbs-link,
+.body[data-theme="dark"] .breadcrumbs-icon,
+.body[data-theme="dark"] .breadcrumbs-item_more .breadcrumbs-link,
+.body[data-theme="dark"] .news-section-item__title,
+.body[data-theme="dark"] .news-section-item__date,
+.body[data-theme="dark"] .news-section-item__link,
+.body[data-theme="dark"] .load-more-switcher,
+.body[data-theme="dark"] .load-more-icon,
+.body[data-theme="dark"] .pager-link,
+.body[data-theme="dark"] .pager-icon,
+.body[data-theme="dark"] .pager-item_active .pager-link,
+.body[data-theme="dark"] .pager-link_side:hover .pager-icon
 {
 	color: #fff;
 }
@@ -75,9 +90,14 @@
 	color: #aaa;
 }
 
-.body[data-theme="dark"] .main-banner
+.body[data-theme="dark"] .main-banner,
+.body[data-theme="dark"] .header
 {
 	border-bottom: 1px solid;
+}
+
+.body[data-theme="dark"] .pager-item_active .pager-link {
+	border: 2px solid;
 }
 
 .body[data-theme="dark"] hr
@@ -105,14 +125,25 @@
 .body[data-theme="dark"] .main-banner,
 .body[data-theme="dark"] .section-border,
 .body[data-theme="dark"] .fast-links-item,
-.body[data-theme="dark"] .news-list-item
+.body[data-theme="dark"] .news-list-item,
+.body[data-theme="dark"] .partners-body,
+.body[data-theme="dark"] .header,
+.body[data-theme="dark"] .news-section-item,
+.body[data-theme="dark"] .pager-link_side
 {
 	border-color: #666;
 }
 
 .body[data-theme="dark"] .owl-dot-button:hover,
-.body[data-theme="dark"] .owl-button:hover {
+.body[data-theme="dark"] .owl-button:hover,
+.body[data-theme="dark"] .pager-link_side:hover
+{
 	border-color: #fff;
+}
+
+.body[data-theme="dark"] .pager-link_side:hover,
+.body[data-theme="dark"] .pager-item_active .pager-link {
+	background: none;
 }
 
 .body[data-theme="dark"] .main-menu-item-homepage::before
@@ -141,7 +172,9 @@
 .body[data-theme="dark"] .mob-list-link_back,
 .body[data-theme="dark"] .main-banner,
 .body[data-theme="dark"] .fast-links-item,
-.body[data-theme="dark"] .news-list-item
+.body[data-theme="dark"] .news-list-item,
+.body[data-theme="dark"] .partners-body,
+.body[data-theme="dark"] .news-section-item
 {
 	background-color: #333;
 }
@@ -203,7 +236,8 @@
 	background-color: #666;
 }
 
-.body[data-theme="dark"] .bg-section
+.body[data-theme="dark"] .bg-section,
+.body[data-theme="dark"] .partners-section
 {
 	background: linear-gradient(180deg, #555 0%, #333 100%);
 }

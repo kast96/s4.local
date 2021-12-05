@@ -1772,6 +1772,9 @@ label.form-error {
 }
 
 .partners-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #fff;
 	box-sizing: border-box;
 }
