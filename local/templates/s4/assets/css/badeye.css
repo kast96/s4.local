@@ -72,7 +72,13 @@
 .body[data-theme="dark"] .pager-link,
 .body[data-theme="dark"] .pager-icon,
 .body[data-theme="dark"] .pager-item_active .pager-link,
-.body[data-theme="dark"] .pager-link_side:hover .pager-icon
+.body[data-theme="dark"] .pager-link_side:hover .pager-icon,
+.body[data-theme="dark"] .news-detail__date,
+.body[data-theme="dark"] .contacts-icon .icon,
+.body[data-theme="dark"] .search-page-title,
+.body[data-theme="dark"] .badeye-title,
+.body[data-theme="dark"] .badeye-control,
+.body[data-theme="dark"] .badeye-control:hover
 {
 	color: #fff;
 }
@@ -129,14 +135,16 @@
 .body[data-theme="dark"] .partners-body,
 .body[data-theme="dark"] .header,
 .body[data-theme="dark"] .news-section-item,
-.body[data-theme="dark"] .pager-link_side
+.body[data-theme="dark"] .pager-link_side,
+.body[data-theme="dark"] .badeye-control
 {
 	border-color: #666;
 }
 
 .body[data-theme="dark"] .owl-dot-button:hover,
 .body[data-theme="dark"] .owl-button:hover,
-.body[data-theme="dark"] .pager-link_side:hover
+.body[data-theme="dark"] .pager-link_side:hover,
+.body[data-theme="dark"] .badeye-control.is-active
 {
 	border-color: #fff;
 }
