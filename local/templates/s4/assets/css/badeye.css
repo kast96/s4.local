@@ -52,7 +52,9 @@
 .body[data-theme="dark"] .main-banner-info,
 .body[data-theme="dark"] .owl-dot.active .owl-dot-button,
 .body[data-theme="dark"] .owl-dot-button:hover,
-.body[data-theme="dark"] .owl-button:hover
+.body[data-theme="dark"] .owl-button:hover,
+.body[data-theme="dark"] .fast-links-description,
+.body[data-theme="dark"] .fast-links-item-title
 {
 	color: #fff;
 }
@@ -68,6 +70,11 @@
 .body[data-theme="dark"] .gallery .owl-dot-button
 {
 	color: #aaa;
+}
+
+.body[data-theme="dark"] .main-banner
+{
+	border-bottom: 1px solid;
 }
 
 .body[data-theme="dark"] hr
@@ -91,7 +98,10 @@
 .body[data-theme="dark"] .mob-info,
 .body[data-theme="dark"] .footer,
 .body[data-theme="dark"] .footer-body,
-.body[data-theme="dark"] .footer-email
+.body[data-theme="dark"] .footer-email,
+.body[data-theme="dark"] .main-banner,
+.body[data-theme="dark"] .section-border,
+.body[data-theme="dark"] .fast-links-item
 {
 	border-color: #666;
 }
@@ -125,7 +135,8 @@
 .body[data-theme="dark"] .mob-list-main-mobile,
 .body[data-theme="dark"] .mob-child,
 .body[data-theme="dark"] .mob-list-link_back,
-.body[data-theme="dark"] .main-banner
+.body[data-theme="dark"] .main-banner,
+.body[data-theme="dark"] .fast-links-item
 {
 	background-color: #333;
 }
@@ -185,4 +196,9 @@
 .body[data-theme="dark"] .switch-decor
 {
 	background-color: #666;
+}
+
+.body[data-theme="dark"] .bg-section
+{
+	background: linear-gradient(180deg, #555 0%, #333 100%);
 }
