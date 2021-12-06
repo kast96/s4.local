@@ -11,7 +11,7 @@ Loc::loadMessages(__FILE__);
 				<div class="news-list-item news-list-item--main">
 					<div class="news-list-item__img">
 						<a href="<?=$arMainItem['DETAIL_PAGE_URL']?>">
-							<img src="<?=$arMainItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arMainItem['NAME']?>" />
+							<img src="<?=($arMainItem['PREVIEW_PICTURE']['SRC']) ?: '/images/noimage.jpg'?>" alt="<?=$arMainItem['NAME']?>" />
 						</a>
 					</div>
 					<div class="news-list-item__body">
@@ -30,7 +30,7 @@ Loc::loadMessages(__FILE__);
 								<div class="col-12 col-lg-4">
 									<div class="news-list-item__img">
 										<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
-											<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" />
+											<img src="<?=($arItem['PREVIEW_PICTURE']['SRC']) ?: '/images/noimage.jpg'?>" alt="<?=$arItem['NAME']?>" />
 										</a>
 									</div>
 								</div>
