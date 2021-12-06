@@ -1814,6 +1814,7 @@ label.form-error {
 }
 
 .partners-section {
+	background-color: #325A97;
 	background-image: url('/images/partners-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;

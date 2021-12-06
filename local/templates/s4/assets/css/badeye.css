@@ -1,5 +1,5 @@
 /* THEME DARK */
-.html[data-theme="dark"],
+.html[data-theme="dark"] .body,
 .html[data-theme="dark"] .header,
 .html[data-theme="dark"] .fancybox-content {
 	background: #444;
@@ -257,7 +257,7 @@
 
 
 /* THEME DARK */
-.html[data-theme="light"],
+.html[data-theme="light"] .body,
 .html[data-theme="light"] .header,
 .html[data-theme="light"] .fancybox-content {
 	background: #fff;
@@ -538,4 +538,33 @@
 .html[data-font-size="big"]
 {
 	font-size: 18px;
+}
+
+
+/* IMAGES BLACK WHITE */
+.html[data-images="bw"] img,
+.html[data-images="bw"] .icon {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+
+.html[data-images="bw"] .main-banner-item,
+.html[data-images="bw"] .partners-section {
+	background-image: none !important;
+}
+
+
+/* IMAGES NONE */
+.html[data-images="none"] img,
+.html[data-images="none"] .icon {
+	opacity: 0;
+}
+
+.html[data-images="none"] .main-banner-item,
+.html[data-images="none"] .partners-section {
+	background-image: none !important;
 }
