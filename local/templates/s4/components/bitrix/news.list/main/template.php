@@ -11,7 +11,7 @@ Loc::loadMessages(__FILE__);
 				<div class="news-section-item news-section-item--wide">
 					<div class="news-section-item__img">
 						<a href="<?=$arFirstItem['DETAIL_PAGE_URL']?>">
-							<img src="<?=$arFirstItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arFirstItem['NAME']?>" />
+							<img src="<?=($arFirstItem['PREVIEW_PICTURE']['SRC']) ?: '/images/noimage.jpg'?>" alt="<?=$arFirstItem['NAME']?>" />
 						</a>
 					</div>
 					<div class="news-section-item__body">
@@ -26,7 +26,7 @@ Loc::loadMessages(__FILE__);
 					<div class="news-section-item">
 						<div class="news-section-item__img">
 							<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
-								<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" />
+								<img src="<?=($arItem['PREVIEW_PICTURE']['SRC']) ?: '/images/noimage.jpg'?>" alt="<?=$arItem['NAME']?>" />
 							</a>
 						</div>
 						<div class="news-section-item__body">
